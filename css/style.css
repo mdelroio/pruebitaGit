@@ -1,0 +1,319 @@
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*estructura general del layout mobile first con GRID */
+
+.bodyGeneral {
+    display: grid;
+    grid-template-areas: "headerGeneral"
+        "navGeneral"
+        "mainGeneral"
+        "footerGeneral";
+}
+
+.headerGeneral {
+    grid-area: headerGeneral;
+    font-size: 1rem;
+    background-color: #2ea1b3;
+    height: 10vh;
+    padding-left: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.navGeneral {
+    grid-area: navGeneral;
+    background-color: #2ea1b3;
+    height: 5vh;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0.3rem;
+    font-size: 1.2em;
+}
+
+/*Dentro del Main arme otro grid para ordenar el Main */
+.mainGeneral {
+    grid-area: mainGeneral;
+    background-color: whitesmoke;
+    height: 75vh;
+    overflow: scroll;
+}
+
+.mainGeneralHome{
+    display: grid;
+    grid-template-areas: "pMain pMain pMain"
+        "contenedorFotoMain contenedorFotoMain contenedorFotoMain"
+        "botonesMain botonesMain botonesMain";
+}
+
+.footerGeneral {
+    grid-area: footerGeneral;
+    background-color: #2ab198be;
+    height: 10vh;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* propiedades del Logo */
+.logo {
+    height: 100%;
+    padding: 0.1rem;
+}
+
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    justify-content: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+nav ul li a:hover {
+    background-color: #c0c3c49a;
+    border-color: #143f469a;
+    border-radius: 25%;
+}
+
+
+/*Botones grandes dentro del Main*/
+
+main ul {
+    list-style: none;
+}
+
+main ul li {
+    background-color: #2ea1b3;
+    display: flex;
+    margin: auto;
+    height: 1vh;
+}
+
+main ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+main ul li a img {
+    height: 4em;
+}
+
+/*Grid dentro del main */
+
+.pMain {
+    padding: 1em;
+    grid-area: pMain;
+    height: 15vh;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.contenedorFotoMain {
+    grid-area: contenedorFotoMain;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2m;
+}
+
+.fotoMain {
+    height: 40vh;
+    border-radius: 50%;
+}
+
+
+.botonesMain {
+    grid-area: botonesMain;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.4em;
+    padding: 0.5em;
+}
+
+
+/* Propiedades del footer */
+
+footer div {
+    display: flex;
+    justify-content: center;
+}
+
+footer a {
+    padding-top: 0.5rem;
+    padding-inline: 1rem;
+}
+
+footer a img {
+    height: 4vh;
+}
+
+footer p {
+    padding-top: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* H1 configuracion que figura en todas las paginas */
+
+h1{
+    text-align: center;
+    font-size: 2em;
+    padding: 1em;
+}
+
+/* configuracion de la pagina Travel Tips */
+
+.categoriasTravelTips {
+    text-align: center;
+    }
+
+.pTravelTips{
+    font-size: 1.5em;
+}
+
+.imagenTravelTips {
+    height: 4.5em;
+    margin: 0.4em;
+    margin-bottom: 1.5em;
+}
+
+
+/* configuracion de la pagina Guias de Viaje */
+.mainGuiasDeViaje {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.guiasDeViaje {
+    height: 25em;
+    padding: 1em;
+}
+
+/* configuracion de la pagina Fotos */
+
+.mainPaginaFotos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fotosPaginaFotos{
+    margin: 0.5em;
+}
+
+/* configuracion de la pagina Contacto */
+
+.formularioContacto{
+    margin: 4em;
+    font-size: 1.3em;
+    line-height: 1.5    em;
+}
+
+/*estructura general del layour para pantallas medianas: Ipads / tables */
+
+@media screen and (min-width: 600px) {
+    .navGeneral {
+        padding: 0.8rem;
+        font-size: 1.2em;
+    }
+
+    nav ul li a {
+        font-size: 1.5rem;
+    }
+
+    .pMain {
+        font-size: 2rem;
+    }
+
+    main ul li a img {
+        height: 7em;
+    }
+
+    footer a img {
+        height: 5vh;
+    }
+
+    .imagenTravelTips {
+        height: 8em;
+    }
+}
+
+/* esctructura general del layour para pantallas grandes + de 1024px con GRID */
+
+@media screen and (min-width:1024px) {
+    .bodyGeneral {
+        display: grid;
+        grid-template-areas:    "headerGeneral navGeneral navGeneral navGeneral"
+                                "mainGeneral mainGeneral mainGeneral mainGeneral"
+                                "footerGeneral footerGeneral footerGeneral footerGeneral";
+    }
+
+    .headerGeneral {
+        height: 10vh;
+        justify-content: flex-start;
+        padding: 0.2em;
+    }
+
+    .navGeneral {
+        height: 10vh;
+        padding: 0.8em;
+    }
+
+    .mainGeneral {
+        height: 80vh;
+    }
+
+    main ul li a img {
+        height: 5em;
+    }
+
+    .footerGeneral {
+        height: 10vh;
+    }
+
+    footer a img{
+        height: 2em;
+     
+    }
+
+    footer p{
+        padding: 0;
+
+    }
+    
+    .imagenTravelTips {
+        height: 5em;
+        margin-bottom: 1    em;
+    }
+
+    .mainGuiasDeViaje {
+        flex-direction: row;}
+        
+}
+
